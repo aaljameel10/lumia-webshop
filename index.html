@@ -25,11 +25,16 @@
 
 /* متغيرات للألوان والخطوط */
 :root {
-  --primary: #c5b4e3;        /* لون رئيسي هادئ (لافندر فاتح) */
-  --secondary: #f7f7f9;      /* خلفيات فاتحة */
-  --accent: #775ab5;         /* لون للتأكيد */
-  --text-color: #333333;     /* لون النص الافتراضي */
-  --card-bg: #ffffff;        /* لون بطاقة المنتج */
+  /*
+   * تم تحديث لوحة الألوان لتعكس هوية شعار لوميــا.
+   * تستخدم الألوان التالية: خلفيات بيضاء ودافئة، نص أسود واضح،
+   * ولمسات ذهبية مستوحاة من الشعار.
+   */
+  --primary: #FFF8E7;        /* خلفية دافئة مائلة إلى الذهبي الفاتح */
+  --secondary: #FFFFFF;      /* خلفيات بيضاء نقية */
+  --accent: #C8A95F;         /* لون ذهبي للتأكيد */
+  --text-color: #000000;     /* نص أسود واضح */
+  --card-bg: #FFFFFF;        /* بطاقات بيضاء */
   --border-radius: 16px;     /* نصف قطر الزوايا الكبيرة */
 }
 
@@ -86,8 +91,9 @@ header {
 }
 
 .logo {
-  width: 48px;
-  height: 48px;
+  /* تكبير الشعار ليتناسب مع الهوية الجديدة */
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -169,7 +175,8 @@ header {
 }
 
 .btn.primary:hover {
-  background-color: #5f47a2;
+  /* ظل أغمق للون الذهبي عند تمرير مؤشر الفأرة */
+  background-color: #A47E31;
 }
 
 .btn.secondary {
@@ -419,7 +426,7 @@ header {
     <header>
       <div class="container header-inner">
         <div class="logo-wrapper">
-          <img src="data:image/jpeg;base64,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" alt="LUMIA Logo" class="logo" />
+          <img src="logo.jpg" alt="LUMIA Logo" class="logo" />
           <span class="site-name">LUMIA</span>
         </div>
         <nav>
