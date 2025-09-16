@@ -26,13 +26,16 @@
 /* متغيرات للألوان والخطوط */
 :root {
   /*
-   * تم تحديث لوحة الألوان لتعكس هوية شعار لوميــا.
-   * تستخدم الألوان التالية: خلفيات بيضاء ودافئة، نص أسود واضح،
-   * ولمسات ذهبية مستوحاة من الشعار.
+   * لوحة الألوان الجديدة لهوية LUMIA وفقاً للصورة المرفقة.
+   * يتم استخدام ألوان البيج الدافئ كلون أساسي للخلفيات، الأبيض
+   * لصفحات وبطاقات، الذهبية/البرونزية كعنصر تمييز رئيسي، وذهبي
+   * دافئ للتمويزات كالمرور بالماوس. النص باللون الأسود لسهولة
+   * القراءة.
    */
-  --primary: #FFF8E7;        /* خلفية دافئة مائلة إلى الذهبي الفاتح */
+  --primary: #F5E5DC;        /* خلفية بيج دافئة (محايدة) */
   --secondary: #FFFFFF;      /* خلفيات بيضاء نقية */
-  --accent: #C8A95F;         /* لون ذهبي للتأكيد */
+  --accent: #D4AF37;         /* ذهبية/برونزية رئيسية */
+  --accent-light: #F4D03F;   /* ذهبي دافئ للتمويزات */
   --text-color: #000000;     /* نص أسود واضح */
   --card-bg: #FFFFFF;        /* بطاقات بيضاء */
   --border-radius: 16px;     /* نصف قطر الزوايا الكبيرة */
@@ -91,17 +94,16 @@ header {
 }
 
 .logo {
-  /* تكبير الشعار ليتناسب مع الهوية الجديدة */
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+  /* ضبط أبعاد الشعار الجديد: صورة أفقية بعرض ثابت وارتفاع تلقائي */
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .site-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent);
+  /* تم إخفاء اسم الموقع لأن الشعار الجديد يحتوي على النص */
+  display: none;
 }
 
 .nav-links {
@@ -175,8 +177,8 @@ header {
 }
 
 .btn.primary:hover {
-  /* ظل أغمق للون الذهبي عند تمرير مؤشر الفأرة */
-  background-color: #A47E31;
+  /* استخدام اللون الدافئ من لوحة الألوان عند تمرير مؤشر الفأرة */
+  background-color: var(--accent-light);
 }
 
 .btn.secondary {
@@ -426,7 +428,8 @@ header {
     <header>
       <div class="container header-inner">
         <div class="logo-wrapper">
-          <img src="logo.jpg" alt="LUMIA Logo" class="logo" />
+          <!-- الشعار الجديد المرفق، يتضمن النص والعنصر البصري -->
+          <img src="logo.png" alt="LUMIA Hair Products Logo" class="logo" />
           <span class="site-name">LUMIA</span>
         </div>
         <nav>
